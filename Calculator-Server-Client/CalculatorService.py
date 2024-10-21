@@ -13,5 +13,7 @@ class Calculator:
             
     @staticmethod
     def calculate_expression(operation, operands)-> str:
-        return f'\n{f' {operation} '.join(operands)} = {eval(f'{operation}'.join(operands))}'
+       joined_operands = f" {operation} ".join(map(str, operands))
+       result = eval(f"{operation}(*{operands})")  # Ensure operands are unpacked correctly
+       return f'\n{joined_operands} = {result}'
         
