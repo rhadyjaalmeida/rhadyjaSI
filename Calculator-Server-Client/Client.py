@@ -3,7 +3,7 @@ import json
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-host = socket.gethostname()
+host = "54.91.8.247"
 port = 15000         
 operators = ("+","-","*","/")
 
